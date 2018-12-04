@@ -1,0 +1,152 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+/* ol, ul {
+	list-style: none;
+} */
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+body {
+  font-family: sans-serif;
+  line-height: 1;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 50px;
+}
+.title p {
+    line-height: 30px;
+}
+
+.title .open-button {
+    border: 1px solid darkslategray;
+    color: darkslategray;
+    font-size: 16px;
+    background-color: #fff;
+    text-transform: uppercase;
+    width: 150px;
+    height: 30px;
+    margin: 15px;
+    border-radius: 15px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.title .open-button:hover {
+    
+    background-color: darkslategray;
+    transition: 0.3s all;
+    color: #fff;
+}
+
+.layer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 50;
+    transition: 0.3s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.layer .form {
+   
+   width: 400px;
+   height: 600px;
+   background-color: #fff;
+   z-index: 100;
+   transition: 0.3s all;
+   
+
+}
+.closed {
+    display: none;
+  }
+.layer .form .headerModal {
+display: flex;
+justify-content: flex-end;
+}
+
+.layer .form .headerModal .close-button {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 30px;
+    color:  darkslategray;
+    display: block;
+    transform: rotate(45deg);
+    margin: 0px 5px;
+    user-select: none;
+}
+.layer .form .headerModal .close-button:hover {
+    transform: rotate(-45deg);
+    transition: 0.3s all;
+    
+}
+.layer .form .input {
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+.layer .form .input .inputBlok {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 20px 30px;
+}
+.layer .form .input .inputBlok p {
+  margin: 5px 0px;
+  user-select: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+}
