@@ -9,9 +9,10 @@
     <title>Document</title>
 </head>
 
-<body>
+<body style ="height: 2000px;">
+<div class="wrapper">
 <div class="title">
-  <div>
+  <div class="text">
     <p>
     Автомобиль находится в столице американской киноиндустрии и телевидения по причине, не имеющей ничего общего с 
     международным автосалоном. Компактная модель является одним из 38 транспортных средств, отобранных для престижных 
@@ -20,11 +21,42 @@
     </p>
   </div>
   <div>
-    <button class="open-button" id="open-button">open modal</button>
+    <button class="open-button" id="openbutton">open modal</button>
+  </div>
+  <div class="container">
+<!-- <input type="text" class="name" onchange="test2('name', event.target.value)" placeholder="enter text">
+  <input type="text" placeholder="enter number" onchange="summa('num1', event.target.value)">
+  <input type="text" placeholder="enter number" onchange="summa('num2', event.target.value)"> -->
+  <!-- <button onclick="su(1)" class="BTN"></button> -->
+<div class="tabNav">
+   <a href="#" class="itemNav active">Item 1</a>
+   <a href="#" class="itemNav">Item 2</a>
+   <a href="#" class="itemNav">Item 3</a>
+</div>
+  <div class="tabContent">
+    <div class="itemTab show">
+      <h1>Contet 1</h1>
+      <div class="foto">
+        <img src="./foto/resize (1).jpg" alt="">
+      </div>
+    </div>
+    <div class="itemTab">
+      <h1>Contet 2</h1>
+      <div class="foto">
+        <img src="./foto/resize (2).jpg" alt="">
+      </div>
+    </div>
+    <div class="itemTab">
+      <h1>Contet 3</h1>
+      <div class="foto">
+        <img src="./foto/resize.jpg" alt="">
+      </div>
+    </div>
   </div>
 </div>
+</div>
 <div class="layer closed" id="modal">
-  <div class="form">
+  <div class="form" id="form">
     <div class="headerModal">
      <div>
       <a class="close-button" id="close-button" href="#">
@@ -59,6 +91,7 @@
    </div>
   </div>
  </div>
+</div>
 </div>
 </body>
 </html>
