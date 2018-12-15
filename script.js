@@ -101,7 +101,7 @@ var data = {
     };
 function password(Param, logPass) {
 var matchSpec = /^\w+$/;
-if (matchSpec.test(logPass) == false || logPass == '') {
+if (matchSpec.test(logPass) == false) {
     alert('Строка не должна содержать пробелы и спецсимволы !!!');
     return;
      } 
