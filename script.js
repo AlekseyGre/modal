@@ -96,31 +96,14 @@ function hideTab (i) {
 ///////////////////////////////////////////////////FETCH POST QWERRY ///////////////////////////////////
 /////////////////////////////////////////////////////LESSONS////////////////////////////////////////////
 var data = {
-        login: '',
-        pass: ''
-    };
-function password(Param, logPass) {
-var matchSpec = /^\w+$/;
-if (matchSpec.test(logPass) == false) {
-    alert('Строка не должна содержать пробелы и спецсимволы !!!');
-    return;
-     } 
-else {
-    if (Param === 'inPas') {
-            data.pass = logPass; 
-    }
-    }
-    if (Param === 'inLog') {
-         data.login = logPass;
-    }   
-     console.log('SAVE Log and Pass to OBJECT>>>>>>>>>', data);
-}
+    login: '',
+    pass: ''
+};
 var urlQwerry = 'http://5c115c827e18800013bc3908.mockapi.io/ver1/Slayer';
-var RegButton = document.querySelector("#Registration");
-var headers = new Headers();
+function post() {
+    var headers = new Headers();
     headers.append('Accept', 'application/json');
     headers.append('Content-Type', 'application/json');
-RegButton.addEventListener("click", function() {
     fetch(urlQwerry, {
         method: 'POST',
         headers: headers,
@@ -138,8 +121,35 @@ RegButton.addEventListener("click", function() {
       .catch(function (error) {
         console.log('>>>>>>>>>>>ERRORS<<<<<<<<', error)
 })
-});
-
+}
+//////////проверка на спецсиволы и запись в обьект данных инпутов//////////////////
+function password(Param, logPass) {
+var matchSpec = /^\w+$/;
+if (matchSpec.test(logPass) == false) {
+    alert('Строка не должна содержать пробелы и спецсимволы !!!');
+    return;
+     } 
+else {
+    if (Param === 'inPas') {
+        
+        data.pass = logPass; 
+    
+    }
+    if (Param === 'inLog') {
+         data.login = logPass;
+    }   
+    }
+     console.log('SAVE Log and Pass to OBJECT>>>>>>>>>', data);
+}
+//////////////////////проверка на пустые инпуты и отправка запроса////////////////////////////////
+function btnQwerry() {
+if (document.getElementsByClassName("in")[0].value == '' || document.getElementsByClassName("in")[1].value == '') {
+    alert('Введити логин и пароль !!!');
+     }
+else {
+    post();
+   }       
+};
 
 
 
