@@ -77,6 +77,71 @@ function hideTab (i) {
     navItem[i].classList.remove('active');
 }
 
+// var test = fetch('https://jsonplaceholder.typicode.com/users')
+// .then(response => response.json())
+// .then(data => {
+//     console.log('data', data);
+//     var Users = data.slice(0, 15);
+//     const elem = document.querySelector('.itemTab');
+//     Users.forEach(element => {
+//         var div = document.createElement('p');
+//         div.innerHTML = element.name;
+//         elem.appendChild(div);
+//     });
+// })
+
+
+
+
+///////////////////////////////////////////////////FETCH POST QWERRY ///////////////////////////////////
+/////////////////////////////////////////////////////LESSONS////////////////////////////////////////////
+var data = {
+        login: '',
+        pass: ''
+    };
+function password(Param, logPass) {
+var matchSpec = /^\w+$/;
+if (matchSpec.test(logPass) == false || logPass == '') {
+    alert('Строка не должна содержать пробелы и спецсимволы !!!');
+    return;
+     } 
+else {
+    if (Param === 'inPas') {
+            data.pass = logPass; 
+    }
+    }
+    if (Param === 'inLog') {
+         data.login = logPass;
+    }   
+     console.log('SAVE Log and Pass to OBJECT>>>>>>>>>', data);
+}
+var urlQwerry = 'http://5c115c827e18800013bc3908.mockapi.io/ver1/Slayer';
+var RegButton = document.querySelector("#Registration");
+var headers = new Headers();
+    headers.append('Accept', 'application/json');
+    headers.append('Content-Type', 'application/json');
+RegButton.addEventListener("click", function() {
+    fetch(urlQwerry, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({
+                user: data.login,
+                password: data.pass
+                }),
+})
+.then(function (response) {
+       return response.json()
+})
+.then(function (data) {
+        console.log('Return DATA Server>>>>> ', data)
+})
+      .catch(function (error) {
+        console.log('>>>>>>>>>>>ERRORS<<<<<<<<', error)
+})
+});
+
+
+
 
 
 

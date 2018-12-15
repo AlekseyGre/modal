@@ -9,7 +9,7 @@
     <title>Document</title>
 </head>
 
-<body style ="height: 2000px;">
+<body>
 <div class="wrapper">
 <div class="title">
   <div class="text">
@@ -23,6 +23,13 @@
   <div>
     <button class="open-button" id="openbutton">open modal</button>
   </div>
+  <div class="reg">
+    <p>Registration</p>
+    <input type="text" placeholder="Enter loggin..." onchange="password('inLog', event.target.value)">
+    <input type="text" placeholder="Enter password..." onchange="password('inPas', event.target.value)">
+    <button class="open-button" id="Registration">accept</button>
+  </div>
+  <div class="resultPOST"></div>
   <div class="container">
 <!-- <input type="text" class="name" onchange="test2('name', event.target.value)" placeholder="enter text">
   <input type="text" placeholder="enter number" onchange="summa('num1', event.target.value)">

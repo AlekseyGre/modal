@@ -192,6 +192,15 @@ body {
         margin:10px;
         height: 100%;
     }
+    .wrapper {
+        margin: 15px 15px;
+    }
+    
+}
+@media (max-width: 1225px) {
+    .wrapper {
+        margin: 15px 15px;
+    }
 }
 
 .lessons {
@@ -227,6 +236,7 @@ body {
     transition: 0.3s all;
     color: #fff;
 }
+/* //////////////////////////////////////////////////TAB ITEMS HOVER//////////////////////////////////////// */
 .tabNav {
     display: flex;
     align-items: center;
@@ -260,4 +270,33 @@ body {
 }
 .itemTab.show {
    display: block;
+}
+/* //////////////////////////////////FETCH POST QWERRY/////////////////////////////// */
+/* ////////////////////////////////////LOGIN//////PASSWORD///////////////////////////// */
+.title .reg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 70%;
+    border: 1px solid gray;
+    box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 5px;
+}
+.title .reg p {
+    color: darkslategray;
+    text-transform: uppercase;
+    text-shadow: -1px 1px rgba(0, 0, 0, 0.25);
+    letter-spacing: 3px;
+}
+.title .reg input {
+    margin-bottom: 15px;
+    outline: none;
+}
+.title .reg input::placeholder {
+    color: darkslategray;
+    transition: color 0.3s;    
+    padding-left: 3px;
+}
+.title .reg input:focus::placeholder {
+     color: transparent;
 }
